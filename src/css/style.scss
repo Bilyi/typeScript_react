@@ -1,5 +1,9 @@
 .left-padding {
   padding-left: 100px;
+
+  @media (max-width: 822px) {
+    padding-left: 30px;
+  }
 }
 
 .btn {
@@ -19,6 +23,14 @@
   width: calc(100% - 200px);
   margin: 30px auto;
   min-height: 325px;
+
+  @media (max-width: 1404px) {
+    width: calc(100% - 60px);
+  }
+
+  @media (max-width: 1192px) {
+    width: calc(100% - 30px);
+  }
 }
 
 .header-title {
@@ -32,10 +44,30 @@
 
   h1 {
     text-shadow: 1px 1px 2px #000;
+
+    @media (max-width: 822px) {
+      //font-size: 1.5em;x
+    }
+
+    @media (max-width: 632px) {
+      font-size: 1.5em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1em;
+    }
   }
 
   .header-buttons {
     margin-right: 20px;
+
+    @media (max-width: 632px) {
+      font-size: 0.8em;
+
+      a {
+        font-size: 0.7em;
+      }
+    }
 
     .login-btn {
       color: #fff;
@@ -56,6 +88,16 @@
   color: #fff;
   display: flex;
   align-items: center;
+
+  h3 {
+    @media (max-width: 632px) {
+      font-size: 1.2em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1em;
+    }
+  }
 
   .btn {
     margin-left: 10px;
@@ -83,6 +125,10 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.5em;
+
+    @media (max-width: 382px) {
+      width: 130px;
+    }
   }
 }
 
@@ -98,9 +144,28 @@
     border-radius: 5px;
     margin: 5px;
     min-height: 238px;
-    background-color: #ccc;
     position: relative;
     cursor: pointer;
+
+    @media (max-width: 1404px) {
+      flex: 0 0 14%;
+    }
+
+    @media (max-width: 1192px) {
+      flex: 0 0 16%;
+    }
+
+    @media (max-width: 1016px) {
+      flex: 0 0 20%;
+    }
+
+    @media (max-width: 822px) {
+      flex: 0 0 30%;
+    }
+
+    @media (max-width: 480px) {
+      flex: 0 0 45%;
+    }
     
     img {
       width: 100%;
@@ -135,6 +200,34 @@
 .footer {
   background-color: #2d2929;
   height: 200px;
-  text-align: center;
   color: #fff;
+  padding-top: 10px;
+
+  .footer-tabs {
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding: 3px 10px;
+      border-right: 1px solid #fff;
+
+      @media (max-width: 822px) {
+        font-size: 0.7em;
+      }
+
+      @media (max-width: 632px) {
+        display: block;
+        padding-left: 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
 }
